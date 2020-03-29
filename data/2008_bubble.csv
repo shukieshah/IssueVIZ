@@ -1,0 +1,85 @@
+,keyword,frequency,issue,percentile,volume
+46,war,31583,War and Peace,1.0,High
+58,iraq,15826,Middle East,0.9880952380952381,High
+15,tax,13497,Taxes,0.9761904761904762,High
+1,economy,9547,Economy,0.9642857142857143,High
+17,taxes,9298,Taxes,0.9523809523809523,High
+32,oil,7707,Energy,0.9404761904761905,High
+59,iran,7546,Middle East,0.9285714285714286,High
+2,economic,7505,Economy,0.9166666666666666,High
+50,gay,6808,LGBT Rights,0.9047619047619048,High
+30,education,5911,Education,0.8928571428571429,High
+24,health care,5143,Healthcare,0.8809523809523809,High
+76,college,4958,Higher Education,0.8690476190476191,High
+42,terrorist,4826,Terrorism,0.8571428571428571,High
+27,crime,4801,Crime,0.8452380952380952,High
+0,abortion,4639,Abortion,0.8333333333333334,High
+8,jobs,4498,Jobs,0.8214285714285714,High
+26,corporations,4348,Corporations,0.8095238095238095,High
+28,drug,3875,Drugs,0.7976190476190477,High
+31,energy,3840,Energy,0.7857142857142857,High
+29,drugs,3744,Drugs,0.7738095238095238,High
+20,foreign policy,3727,Foreign Policy,0.7619047619047619,High
+62,china,3517,China,0.75,Medium
+71,russia,3385,Russia,0.7380952380952381,Medium
+54,science,3333,Infrastructure and Technology,0.7261904761904762,Medium
+23,healthcare,3224,Healthcare,0.7142857142857143,Medium
+7,trade,2912,Trade,0.7023809523809523,Medium
+41,terrorism,2788,Terrorism,0.6904761904761905,Medium
+47,welfare,2533,Welfare and Poverty,0.6785714285714286,Medium
+33,civil rights,2496,Civil Rights,0.6666666666666666,Medium
+61,afghanistan,2427,Middle East,0.6547619047619048,Medium
+53,technology,1973,Infrastructure and Technology,0.6428571428571429,Medium
+11,environment,1804,Climate Change and Environment,0.6309523809523809,Medium
+45,social security,1620,Social Security,0.6190476190476191,Medium
+73,privacy,1583,Privacy,0.6071428571428571,Medium
+52,infrastructure,1508,Infrastructure and Technology,0.5952380952380952,Medium
+56,space,1504,Space Exploration,0.5833333333333334,Medium
+25,corporation,1491,Corporations,0.5714285714285714,Medium
+16,taxation,1377,Taxes,0.5595238095238095,Medium
+48,poverty,1355,Welfare and Poverty,0.5476190476190477,Medium
+70,housing,1349,Housing,0.5357142857142857,Medium
+38,national security,1247,National Security,0.5238095238095238,Medium
+18,immigration,1228,Immigration,0.5119047619047619,Medium
+51,same-sex,1148,LGBT Rights,0.5,Medium
+4,deficit,1126,Budget,0.4880952380952381,Medium
+13,global warming,1090,Climate Change and Environment,0.47619047619047616,Medium
+65,nuclear weapons,1041,Nuclear Weapons,0.4642857142857143,Medium
+83,disease,920,Disease Prevention,0.4523809523809524,Medium
+21,medicare,891,Healthcare,0.44047619047619047,Medium
+12,environmental,834,Climate Change and Environment,0.42857142857142855,Medium
+35,gun control,819,Gun Control,0.4166666666666667,Medium
+10,unemployment,711,Jobs,0.40476190476190477,Medium
+44,taliban,650,Terrorism,0.39285714285714285,Medium
+39,homeland security,593,National Security,0.38095238095238093,Medium
+5,financial crisis,527,Financial Crisis,0.36904761904761907,Medium
+64,death penalty,517,Death Penalty,0.35714285714285715,Medium
+60,syria,483,Middle East,0.34523809523809523,Medium
+14,climate change,464,Climate Change and Environment,0.3333333333333333,Medium
+63,north korea,459,North Korea,0.32142857142857145,Medium
+55,stem,413,Infrastructure and Technology,0.30952380952380953,Medium
+40,national defense,392,National Security,0.2976190476190476,Medium
+75,higher education,386,Higher Education,0.2857142857142857,Medium
+3,federal budget,382,Budget,0.27380952380952384,Medium
+36,gun laws,359,Gun Control,0.2619047619047619,Medium
+22,medicaid,346,Healthcare,0.25,Low
+57,NASA,315,Space Exploration,0.23809523809523808,Low
+37,government reform,307,Government Reform,0.2261904761904762,Low
+69,imprisonment,253,Criminal Justice,0.21428571428571427,Low
+66,criminal justice,242,Criminal Justice,0.20238095238095238,Low
+78,student loans,194,Higher Education,0.19047619047619047,Low
+68,incarceration,163,Criminal Justice,0.17857142857142858,Low
+6,financial regulation,133,Financial Crisis,0.16666666666666666,Low
+19,border security,117,Immigration,0.15476190476190477,Low
+67,police brutality,111,Criminal Justice,0.14285714285714285,Low
+74,data security,105,Privacy,0.13095238095238096,Low
+49,lgbt,88,LGBT Rights,0.11904761904761904,Low
+9,job reform,77,Jobs,0.10714285714285714,Low
+77,student debt,66,Higher Education,0.09523809523809523,Low
+34,gun reform,30,Gun Control,0.08333333333333333,Low
+72,racial justice,27,Racial Justice,0.07142857142857142,Low
+82,pandemic,25,Disease Prevention,0.05952380952380952,Low
+43,isis,5,Terrorism,0.047619047619047616,Low
+79,coronavirus,0,Disease Prevention,0.023809523809523808,Low
+80,covid-19,0,Disease Prevention,0.023809523809523808,Low
+81,covid,0,Disease Prevention,0.023809523809523808,Low

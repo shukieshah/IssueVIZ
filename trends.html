@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>IssueVIZ</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="SolMusic HTML Template">
+	<meta name="keywords" content="music, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="css/style.css"/>
+
+
+</head>
+
+<style> /* set the CSS */
+
+path {
+    stroke: #ccc;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+#legendContainer{
+  position:absolute;
+  top:400px;
+  right:0px;
+  overflow: auto;
+  height:650px;
+  width:300px;
+}
+.bg-light {
+  background:	#ccdcff !important;
+}
+#legend{
+  width:300px;
+  height:600px;
+}
+.legend {
+    font-size: 12px;
+    font-weight: normal;
+    text-anchor: left;
+}
+.legendcheckbox{
+  cursor: pointer;
+}
+#showAll{
+  position:absolute;
+  top:1050px;
+  left:300px;
+}
+#clearAll{
+  position:absolute;
+  top:1050px;
+  left:400px;
+}
+input{
+  border-radius:5px;
+  padding:5px 10px;
+  background:#999;
+  border:0;
+  color:#fff;
+}
+/* #inds{
+  position:absolute;
+  top:10px;
+  left:10px;
+} */
+</style>
+
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section clearfix">
+		<a href="index.html" class="site-logo">
+			<img src="img/logo.png" alt="">
+		</a>
+
+		<ul class="main-menu">
+			<li><a href="index.html">About</a></li>
+			<li><a href="#">Top Election Issues</a>
+				<ul class="sub-menu">
+					<li><a href="top_issues.html?year=2008" id="top_issues">2008 Election</a></li>
+					<li><a href="top_issues.html?year=2012" id="top_issues">2012 Election</a></li>
+					<li><a href="top_issues.html?year=2016" id="top_issues">2016 Election</a></li>
+					<li><a href="top_issues.html?year=2020" id="top_issues">2020 Election</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Bubble View</a>
+				<ul class="sub-menu">
+					<li><a href="bubble_view.html?year=2008" id="top_issues">2008 Election</a></li>
+					<li><a href="bubble_view.html?year=2012" id="top_issues">2012 Election</a></li>
+					<li><a href="bubble_view.html?year=2016" id="top_issues">2016 Election</a></li>
+					<li><a href="bubble_view.html?year=2020" id="top_issues">2020 Election</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Word Cloud</a>
+				<ul class="sub-menu">
+					<li><a href="word_cloud.html?year=2008" id="top_issues">2008 Election</a></li>
+					<li><a href="word_cloud.html?year=2012" id="top_issues">2012 Election</a></li>
+					<li><a href="word_cloud.html?year=2016" id="top_issues">2016 Election</a></li>
+					<li><a href="word_cloud.html?year=2020" id="top_issues">2020 Election</a></li>
+				</ul>
+			</li>
+			<li><a href="trends.html">Trends</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+
+		</ul>
+	</header>
+	<!-- Header section end -->
+
+	<section class="premium-section spad">
+		<div class="container">
+			<div class="row">
+					<div class="section-title">
+						<h2 id="title-text">Trends Over Time</h2>
+						<p> Check the boxes to toggle between various issues.</p>
+					</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-5 order-lg-1">
+					<img src="img/logo.png" alt="">
+					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Team Visualizers
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+					<div class="social-links">
+						<a href=""><i class="fa fa-instagram"></i></a>
+						<a href=""><i class="fa fa-pinterest"></i></a>
+						<a href=""><i class="fa fa-facebook"></i></a>
+						<a href=""><i class="fa fa-twitter"></i></a>
+						<a href=""><i class="fa fa-youtube"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+
+	<!-- load the d3.js library -->
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <!-- <select id="inds">
+  		<option value="Election Issues" selected="selected">Election Issues</option>
+  </select> -->
+  <div id="legendContainer" class="legendContainer">
+  	<svg id="legend"></svg>
+  </div>
+  <div id="showAll">
+  	<input name="showAllButton"
+  	 type="button"
+  	 value="Show All"
+  	 onclick="showAll()" />
+  </div>
+  <div id="clearAll">
+  	<input name="clearAllButton"
+  	 type="button"
+  	 value="Clear All"
+  	 onclick="clearAll()" />
+  </div>
+  <script>
+
+  function filterJSON(json, key, value) {
+    var result = [];
+    json.forEach(function(val,idx,arr){
+      if(val[key] == value){
+
+        result.push(val)
+      }
+    })
+    return result;
+  }
+
+  // Set the dimensions of the canvas / graph
+  var margin = {top: 30, right: 20, bottom: 30, left: 160},
+      width = 1000 - margin.left - margin.right,
+      height = 550 - margin.top - margin.bottom;
+
+  // Parse the date / time
+
+
+  // Set the ranges
+  var x = d3.time.scale().range([0, width]);
+  var y = d3.scale.linear().range([height, 0]);
+
+  // Define the axes
+  var xAxis = d3.svg.axis().scale(x)
+      .orient("bottom").ticks(5)
+      .tickFormat(function(d, i)  {
+        if (i%2 == 0) {
+          return "" + (2008 + 2*i);
+        } else {
+          return "";
+        } //"Year1 Year2, etc depending on the tick value - 0,1,2,3,4"
+      })
+
+  var yAxis = d3.svg.axis().scale(y)
+      .orient("left").ticks(10);
+
+  // Define the line
+  var issueline = d3.svg.line()
+  		.interpolate("cardinal")
+      .x(function(d) { return x(d.year); })
+      .y(function(d) { return y(d.value); });
+
+  // Adds the svg canvas
+  var svg = d3.select(".row")
+      .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+          .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+  var data;
+  // Get the data
+  d3.json("data/trends.json", function(error, json) {
+    console.log(json)
+
+    json.forEach(function(d) {
+  		d.value = +d.value;
+    });
+
+  	// d3.select('#inds')
+  	// 		.on("change", function () {
+  	// 			var sect = document.getElementById("inds");
+  	// 			var section = sect.options[sect.selectedIndex].value;
+    //
+  	// 			data = filterJSON(json, 'produce', section);
+    //
+    //
+  	//       //debugger
+    //
+  	// 	    data.forEach(function(d) {
+    //   			d.value = +d.value;
+    //   			//d.year = parseDate(String(d.year));
+    //   			d.active = true;
+    //   		});
+    //
+    //
+  	// 	    //debugger
+  	// 			updateGraph(data);
+    //
+    //
+  	// 			jQuery('h1.page-header').html(section);
+  	// 		});
+
+  	// generate initial graph
+  	data = filterJSON(json, 'mode', 'Election Issues');
+  	updateGraph(data);
+
+  });
+
+  var color = d3.scale.category20c();
+
+  function updateGraph(data) {
+
+
+      // Scale the range of the data
+      x.domain(d3.extent(data, function(d) { return d.year; }));
+      y.domain([d3.min(data, function(d) { return d.value; }), d3.max(data, function(d) { return d.value; })]);
+
+
+      // Nest the entries by issue
+      dataNest = d3.nest()
+          .key(function(d) {return d.issue.replace(/ /g,'-')})
+          .entries(data);
+
+
+   		var result = dataNest.filter(function(val,idx, arr){
+  				  return $("div[" + idx + "]").attr("fill") != "#ccc"
+  				  // matching the data with selector status
+  				})
+
+
+   		var issue = svg.selectAll(".line")
+        .data(result, function(d){return d.key});
+
+  		issue.enter().append("path")
+  			.attr("class", "line");
+
+  		issue.transition()
+  			.style("stroke", function(d,i) { return d.color = color(d.key); })
+  			.attr("id", function(d){ return 'tag'+d.key.replace(/\s+/g, '');}) // assign ID
+  			.attr("d", function(d){
+
+  				return issueline(d.values)
+  			});
+
+  		issue.exit().remove();
+
+  		var legend = d3.select("#legend")
+  			.selectAll("text")
+  			.data(dataNest, function(d){return d.key});
+
+  		//checkboxes
+  		legend.enter().append("rect")
+  		  .attr("width", 10)
+  		  .attr("height", 10)
+  		  .attr("x", 0)
+  		  .attr("y", function (d, i) { return 0 +i*15; })  // spacing
+  		  .attr("fill",function(d) {
+  		    return color(d.key);
+
+  		  })
+  		  .attr("class", function(d,i){return "legendcheckbox " + d.key})
+  			.on("click", function(d){
+  			  d.active = !d.active;
+
+  			  d3.select(this).attr("fill", function(d){
+  			    if(d3.select(this).attr("fill")  == "#ccc"){
+  			      return color(d.key);
+  			    }else {
+  			      return "#ccc";
+  			    }
+  			  })
+
+
+  			 var result = dataNest.filter(function(val,idx, arr){
+           return $("." + val.key).attr("fill") != "#ccc"
+         // matching the data with selector status
+        })
+
+         // Hide or show the lines based on the ID
+         svg.selectAll(".line").data(result, function(d){return d.key})
+           .enter()
+           .append("path")
+           .attr("class", "line")
+           .style("stroke", function(d,i) { return d.color = color(d.key); })
+          .attr("d", function(d){
+                  return issueline(d.values);
+           });
+
+        svg.selectAll(".line").data(result, function(d){return d.key}).exit().remove()
+
+  			})
+
+      // Add the Legend text
+      legend.enter().append("text")
+        .attr("x", 15)
+        .attr("y", function(d,i){return 10 +i*15;})
+        .attr("class", "legend");
+
+  		legend.transition()
+        .style("fill", "#777" )
+        .text(function(d){return d.key;});
+
+  		legend.exit().remove();
+
+  		svg.selectAll(".axis").remove();
+
+      // Add the X Axis
+      svg.append("g")
+          .attr("class", "x axis")
+          .attr("transform", "translate(0," + height + ")")
+          .call(xAxis);
+
+      // Add the Y Axis
+      svg.append("g")
+          .attr("class", "y axis")
+          .call(yAxis);
+  };
+
+  function clearAll(){
+    d3.selectAll(".line")
+  	.transition().duration(100)
+  			.attr("d", function(d){
+          return null;
+        });
+    d3.select("#legend").selectAll("rect")
+    .transition().duration(100)
+        .attr("fill", "#ccc");
+  };
+
+  function showAll(){
+    d3.selectAll(".line")
+  	.transition().duration(100)
+  			.attr("d", function(d){
+          return issueline(d.values);
+        });
+    d3.select("#legend").selectAll("rect")
+    .attr("fill",function(d) {
+      if (d.active == true){
+         return color(d.key);
+       }
+     })
+  };
+
+  </script>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+	</body>
+</html>
