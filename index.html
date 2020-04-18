@@ -37,7 +37,7 @@
 
 		<ul class="main-menu">
 			<li><a href="index.html">About</a></li>
-			<li><a href="#">Top Election Issues</a>
+			<li><a href="top_issues.html?year=2020">Histogram</a>
 				<ul class="sub-menu">
 					<li><a href="top_issues.html?year=2008" id="top_issues">2008 Election</a></li>
 					<li><a href="top_issues.html?year=2012" id="top_issues">2012 Election</a></li>
@@ -45,7 +45,7 @@
 					<li><a href="top_issues.html?year=2020" id="top_issues">2020 Election</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Bubble View</a>
+			<li><a href="bubble_view.html?year=2020">Bubble View</a>
 				<ul class="sub-menu">
 					<li><a href="bubble_view.html?year=2008" id="top_issues">2008 Election</a></li>
 					<li><a href="bubble_view.html?year=2012" id="top_issues">2012 Election</a></li>
@@ -53,7 +53,7 @@
 					<li><a href="bubble_view.html?year=2020" id="top_issues">2020 Election</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Word Cloud</a>
+			<li><a href="word_cloud.html?year=2020">Word Cloud</a>
 				<ul class="sub-menu">
 					<li><a href="word_cloud.html?year=2008" id="top_issues">2008 Election</a></li>
 					<li><a href="word_cloud.html?year=2012" id="top_issues">2012 Election</a></li>
@@ -80,7 +80,7 @@
 												<h2 class="text-white">Visualize what matters most.</h2>
 											</div>
 									<p class="text-white">IssueVIZ leverages data-driven visualizations to help you analyze trending presidential election issues and key words during election years.</p>
-									<a href="faq.html" class="site-btn">Learn More</a>
+									<a href="#learnMore" class="site-btn">Learn More</a>
 									<a href="top_issues.html?year=2020" class="site-btn sb-c2">Get Started</a>
 								</div>
 							</div>
@@ -101,7 +101,7 @@
 					</div>
 				</div>
 				<div class="col-lg-8">
-					<p>All of the data is sourced from <code>reddit.com</code> from popular political threads such as <code>r/politics</code> and <code>r/politicaldiscussion.</code> You can visualize the top issues or key words (ranked based on Reddit comment frequency) for each election year. Alternatively, you can analyze the overarching trends over time.</p>
+					<p>IssueViz was built to understand what topics were of importance regarding the American presidential elections, to be able to better see the issues that are at the forefront of our nation and in the minds of voters. Whether you are a first-time voter, a long-time voter, or merely an observer of American politics, we hope you use this tool to visualize key election topics, understand how different issues trend over time, and maybe even start to form your own ideas about the kinds of issues that are important to you.</p>
 				</div>
 			</div>
 		</div>
@@ -146,7 +146,7 @@
 						<div class="hi-icon">
 							<img src="img/icons/pointer.png" alt="">
 						</div>
-						<h4>Line Chart</h4>
+						<h4>Trends</h4>
 
 					</div>
 				</div>
@@ -155,56 +155,67 @@
 	</section>
 	<!-- How section end -->
 
-
 	<!-- Premium section end -->
 	<section class="premium-section spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6">
+				<div >
 					<div class="section-title">
-						<h2>About</h2>
+						<h2 id="learnMore">How It Works</h2>
+						<br/>
+						<p> All of the data is sourced from <a href="https://www.reddit.com/">reddit.com</a> from popular political subreddits, specifically  <a href="https://www.reddit.com/r/politics/">r/politics</a>, <a href="https://www.reddit.com/r/politicaldiscussion/">r/politicaldiscussion</a>, <a href="https://www.reddit.com/r/neutralpolitics/">r/neutralpolitics</a>, and <a href="https://www.reddit.com/r/ask_politics/">r/ask_politics.</a>  You can visualize the top issues or key words (ranked based on Reddit comment frequency) for each election year. Alternatively, you can analyze the overarching trends over time.</p>
 					</div>
 				</div>
 
-			<!-- </div>
+			</div>
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="premium-item">
-						<img src="img/elonmusk.png" alt="">
-						<h4>Elon Musk, CEO of Tesla  </h4>
+						<img src="img/histogram.jpg" alt="">
+						<h4>Histogram</h4>
 
 					</div>
 				</div>
 				<div class="col-sm-8">
 					<div><br/><br/><br/>
-					<p>“I’ll just put it frankly, that Terminus is like a dream realized. That hyperloop vision that I’d originally had between San Francisco and New York has become infinitely bigger and better! I knew that we’d reach this goal some day, of course, but now that it’s here I’m incredibly excited about the future we can create. Right now Terminus is only available for Atlanta, but just think about the promise for using Terminium power for not just people on Earth, but also cargo and possibly for space.”</p></div>
+					<p>Histogram displays the key election topics for the year in a bar chart format, making it easier for viewers to clearly see the order of topics in frequency, as well as the number of times the topic was referenced.</p></div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-8">
 					<div><br/><br/><br/>
-						<p>“Part of what our team has been striving to do for the past few decades has been trying to achieve faster and faster speeds while minimizing damage to the Earth. Terminus represents a perfect balance between the fastest speeds we’ve ever seen in transport and environmental health. From the maglev technology that we developed so many years ago, a greater version has now been born.”</p></div>
+						<p>Bubble View breaks down topics into "key words", where a topic may be associated with more than one word. This provides the viewer with a more specific breakdown of topics, by allowing them to hover on different words and see its frequency.</p></div>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<div class="premium-item">
-						<img src="img/hideoshima.png" alt="">
-						<h4>Hideo Shima, Bullet Train Inventor</h4>
+						<img src="img/bubbles.png" alt="">
+						<h4>Bubble View</h4>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="premium-item">
-						<img src="img/billgates.png" width="100%" alt="">
-						<h4>Bill Gates, Microsoft Founder and Billionaire</h4>
+						<img src="img/wordcloud.jpg" width="100%" alt="">
+						<h4>Word Cloud</h4>
 					</div>
 				</div>
 				<div class="col-sm-8">
 						<div><br/><br/><br/>
-						<p>
-								“As we’ve been living longer, our focus is shifting towards well-being and preserving the health of the people and environment around us. Terminium and the transportation system that results from its use represents a paradigm shift in transportation technology and must be used to its full potential.”
-								</p></div>
-					</div> -->
+						<p>Word Cloud provides an interesting visualization for viewers to look at topics. They can associate the size of the word with the relative frequency, providing stark contrast between high-frequency and low-frequency topics.</p></div>
+					</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8">
+					<div><br/><br/><br/>
+						<p>Trends displays all the top topics at once, showing its evolution over a time. Here, viewers can see which topics became more or less important throughout the years, and which ones stayed the same. They can use the selection tool to pick and choose which topics to look at.</p></div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="premium-item">
+						<img src="img/trends.png" alt="">
+						<h4>Trends</h4>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
