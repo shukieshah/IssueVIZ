@@ -74,8 +74,9 @@
 			<div class="row">
 					<div class="section-title">
 						<h2 id="title-text">Top Election Issues</h2>
+						<br/>
+						<p id="issue-info">Click on any one of the top 10 issues to see more details.</p>
 					</div>
-			</div>
 			</div>
 		</div>
 	</section>
@@ -170,6 +171,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
       x.domain([0, root.value]).nice();
       down(root, 0);
+			document.getElementById("issue-info").innerHTML = "Click on any one of the top 10 bars to see more details.";
     });
 
     function down(d, i) {
@@ -235,6 +237,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
           .duration(end);
 
       d.index = i;
+			document.getElementById("issue-info").innerHTML = d.data.name + " ranked as the number " + (d.index + 1) + " issue in " + year + ". ";
+			if (d.data.info) {
+				document.getElementById("issue-info").innerHTML = document.getElementById("issue-info").innerHTML + d.data.info;
+			}
     }
 
     function up(d) {
