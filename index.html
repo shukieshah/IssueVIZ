@@ -163,7 +163,14 @@
 					<div class="section-title">
 						<h2 id="learnMore">How It Works</h2>
 						<br/>
-						<p> All of the data is sourced from <a href="https://www.reddit.com/">reddit.com</a> from popular political subreddits, specifically  <a href="https://www.reddit.com/r/politics/">r/politics</a>, <a href="https://www.reddit.com/r/politicaldiscussion/">r/politicaldiscussion</a>, <a href="https://www.reddit.com/r/neutralpolitics/">r/neutralpolitics</a>, and <a href="https://www.reddit.com/r/ask_politics/">r/ask_politics.</a>  You can visualize the top issues or key words (ranked based on Reddit comment frequency) for each election year. Alternatively, you can analyze the overarching trends over time.</p>
+						<p> All of the data for IssueVIZ is sourced from <a href="https://www.reddit.com/">reddit.com.</a> To construct the visualizations, we first retrieved a general list of issues/topics for each presidential election, taken from online political forums. These lists were aggregated to form a total of 40 overarching election issues/topics spanning the last four presidential election cycles. Then, we constructed a mapping from each overarching issue to the associated “keywords” that are relevant to the category:</p>
+						<div>
+							<img src="img/mapping.png" height=600 width=1500 alt="">
+						</div>
+						<br/>
+						<br/>
+						<p>For each keyword, we mined the frequency of unique Reddit comments containing that keyword. The Reddit comments analyzed were those posted from January 1st through December 31st of each US presidential election year since 2005. To account for high comment variance, we limited our analysis to popular political subreddits, specifically <a href="https://www.reddit.com/r/politics/">r/politics</a>, <a href="https://www.reddit.com/r/politicaldiscussion/">r/politicaldiscussion</a>, <a href="https://www.reddit.com/r/neutralpolitics/">r/neutralpolitics</a>, and <a href="https://www.reddit.com/r/ask_politics/">r/ask_politics.</a> To calculate the popularity of a particular issue for a specific election year, we simply added all of the frequency counts associated with the relevant keywords during the given year. For further details, please refer to our GitHub <a href="https://github.com/shukieshah/IssueVIZ">project repository.</a></p>
+						<p>Using this data, you can visualize the top issues or key words (ranked based on comment frequency) for each election year. Alternatively, you can analyze the overarching trends over time.</p>
 					</div>
 				</div>
 
